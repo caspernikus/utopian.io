@@ -97,6 +97,7 @@ export const Rules = ({type, acceptRules, inEditor}) => {
           {inEditor ? <p><small><a href="https://utopian.io/rules" target="_blank">Read all the rules</a></small></p> : null}
           <ul>
             <li>This category is meant only for translations you have updated or created for an Open Source project.</li>
+            <li>Only translations that were requested in a Task Request and approved by the project owner will be accepted.</li>
             <li><b>Minimum 1000 words per translation contribution.</b> Text that is supposed to remain untranslated (links, code, paths, ...) or duplicated strings/text can't be included in the minimum amount of words.</li>
             <li>Proofread or merged translations are always preferred. Submitting translations that are not proofread will lead to a lower vote.</li>
             <li>You could translate less than the minimum amount of words if the project itself has less to be translated in total. May lead to a lower vote.</li>
