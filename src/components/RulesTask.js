@@ -67,6 +67,7 @@ export const RulesTask = ({type, acceptRules, inEditor}) => {
             <li>You can only post in this category if you are looking for translators to translate your project.</li>
             <li>You must provide any necessary information for the translators to start their work.</li>
             <li>Location of the files to be translated, tools to use, languages you are looking for and similar info are necessary.</li>
+            <li>You as the project owner are in full responsibility for the correctness of the translations.</li>
           </ul>
           <p>Not respecting the rules will either give you lower exposure or your task request won't be accepted.</p>
           {inEditor ? <AcceptRules acceptRules={acceptRules} /> : null}
