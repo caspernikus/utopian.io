@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { IntlProvider } from 'react-intl';
-import { withRouter } from 'react-router-dom';
+import { withRouter, NavLink } from 'react-router-dom';
 import { Layout } from 'antd';
 import Cookie from 'js-cookie';
 import Loading from './components/Icon/Loading';
+import CookieBanner from './cookies/CookieBanner';
 
 import { getAuthenticatedUser, getLocale } from './reducers';
 import { getReposByGithub } from './actions/projects';
@@ -129,12 +130,19 @@ export default class Wrapper extends React.PureComponent {
 
   render() {
     const { locale: appLocale, user, location } = this.props;
+    const { cookies } = this.state;
     const locale = getAvailableLocale(appLocale);
     const translations = getTranslations(appLocale);
 
     return (
       <IntlProvider key={locale} locale={locale} messages={translations}>
         <Layout>
+          <CookieBanner>
+              To give you the best possible experience, this site uses cookies. Using utopian.io means you agree to our use of cookies. We have published a new cookie
+              policy, which you should read to find out more about the cookies we use. View<NavLink to="/cookies" style={{ color: 'white', marginLeft: '5px' }}>
+                cookie policy.
+              </NavLink>
+          </CookieBanner>
           <Layout.Header style={{ position: 'fixed', width: '100%', zIndex: 5 }}>
             <Topnav username={user.name} onMenuItemClick={this.handleMenuItemClick} history={this.props.history} location={location} />
           </Layout.Header>

@@ -25,6 +25,7 @@ import Moderators from './statics/Moderators';
 import WelcomeModerator from './statics/WelcomeModerator';
 import PostShortlink from './statics/PostShortlink';
 import Faq from './statics/Faq';
+import CookiePolicy from './cookies/CookiePolicy';
 import BannedScreen from './statics/BannedScreen';
 import Team from './statics/Team';
 import Write from './post/Write/Write';
@@ -58,6 +59,7 @@ export default (
       <Route path="/moderators" exact component={Moderators} />
       <Route path="/welcome-moderator" exact component={WelcomeModerator} />
       <Route path="/faq" exact component={Faq} />
+      <Route path="/cookies" exact component={CookiePolicy} />
       <Route path="/banned" exact component={BannedScreen} />
       <Route
         path="/bookmarks"

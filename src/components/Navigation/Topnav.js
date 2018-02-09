@@ -48,7 +48,7 @@ class Topnav extends React.Component {
     if (location.pathname.indexOf('search/social') > -1) return 'social';
     if (location.pathname.indexOf('search/blog') > -1) return 'blog';
 
-    const which = location.pathname.substring(1); 
+    const which = location.pathname.substring(1);
     if (which === 'all' || which === '/all') return 'projects';
     if (location.pathname.split('/').length != 1 && this.inValidPaths(which)) {
       return which;
@@ -108,7 +108,7 @@ class Topnav extends React.Component {
     const size = window.innerWidth;
     if (size <= 736) {
       return shorter;
-    } 
+    }
     return longer;
   }
 
@@ -188,7 +188,7 @@ class Topnav extends React.Component {
         <div className="Topnav__menu-container">
           <Menu selectedKeys={[]} className="Topnav__menu-container__menu" mode="horizontal">
             <Menu.Item key="write" className="Topnav__item-write-new nobottom">
-              <Action primary={true} cozy={true} style={{ margin: '3px 0' }} 
+              <Action primary={true} cozy={true} style={{ margin: '3px 0' }}
               text={
               // <Tooltip placement="bottom" title={<span><a href="/write" style={{color: "white"}}>Write a new Contributor Report</a></span>}>
                 <Link to="/write" className="Topnav__newReport">

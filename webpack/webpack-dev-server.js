@@ -53,7 +53,7 @@ module.exports = {
         STEEMJS_URL: JSON.stringify(process.env.STEEMJS_URL),
         IS_BROWSER: JSON.stringify(true),
         PUSHPAD_PROJECT_ID: process.env.PUSHPAD_PROJECT_ID,
-        BUSYPUSH_ENDPOINT: process.env.BUSYPUSH_ENDPOINT
+        BUSYPUSH_ENDPOINT: process.env.BUSYPUSH_ENDPOINT,
       },
     }),
   ],
